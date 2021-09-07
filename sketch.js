@@ -50,7 +50,7 @@ function setup() {
     bunny.addImage(bunnyImg);
     bunny.scale = 0.3;
 
-    invisibleGround = createSprite(10,displayHeight,2500,15);
+    invisibleGround = createSprite(10,700,2500,15);
     invisibleGround.visible = false;
 }
 
@@ -60,8 +60,8 @@ function draw() {
     ground.display();
 
     player.collide(invisibleGround);
-    //enemy.collide(invisibleGround);
-    //bunny.collide(invisibleGround);
+    enemy.collide(invisibleGround);
+    bunny.collide(invisibleGround);
 
     if(gro.x < 0) {
        gro.x = gro.width/2;
