@@ -41,15 +41,15 @@ function setup() {
     player.addAnimation("running", playerRunning);
     player.scale = 0.5;
 
-    enemy = createSprite(1050,265,30,30);
+    enemy = createSprite(1050,270,30,30);
     enemy.addImage(enemyImg);
     enemy.scale = 0.6;
 
-    bunny = createSprite(1230,295,30,30);
+    bunny = createSprite(1230,300,30,30);
     bunny.addImage(bunnyImg);
     bunny.scale = 0.3;
 
-    invisibleGround = createSprite(10,700,2500,15);
+    invisibleGround = createSprite(10,460,2500,15);
     invisibleGround.visible = false;
 }
 
