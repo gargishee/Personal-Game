@@ -19,13 +19,11 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(displayWidth,displayHeight);
+    createCanvas(displayWidth,500);
 
     engine = Engine.create();
     world = engine.world;
     Engine.run(engine);
-
-    ground = new ground(250,250,20,20);
 
     //backg = createSprite(500,190);
     //backg.addImage("bground",bgImg);
@@ -35,6 +33,7 @@ function setup() {
 
     gro = createSprite(width/2,height,width,2);
     gro.addImage("ground",grassImg);
+    gro.scale = 5;
     gro.x = width/2
     gro.velocityX = -6;
 
@@ -42,11 +41,11 @@ function setup() {
     player.addAnimation("running", playerRunning);
     player.scale = 0.5;
 
-    enemy = createSprite(1050,255,30,30);
+    enemy = createSprite(1050,265,30,30);
     enemy.addImage(enemyImg);
     enemy.scale = 0.6;
 
-    bunny = createSprite(1230,285,30,30);
+    bunny = createSprite(1230,295,30,30);
     bunny.addImage(bunnyImg);
     bunny.scale = 0.3;
 
@@ -56,9 +55,7 @@ function setup() {
 
 function draw() {
     background(bgImg);
-
-    ground.display();
-
+    
     player.collide(invisibleGround);
     enemy.collide(invisibleGround);
     bunny.collide(invisibleGround);
