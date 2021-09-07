@@ -50,7 +50,7 @@ function setup() {
     bunny.addImage(bunnyImg);
     bunny.scale = 0.3;
 
-    invisibleGround = createSprite(10,365,2500,15);
+    invisibleGround = createSprite(10,displayHeight,2500,15);
     invisibleGround.visible = false;
 }
 
